@@ -1,0 +1,70 @@
+JS. HW_2
+
+Напишите валидационный скрипт используя функции 
+
+ - Скрипт должен на вход принимать строку.
+ - После проверки строки выводить в консоль сообщение где будет конкретно написано, что не так в ведённой строке.
+ - Минимум 5 символов в строке
+ - Максимум 64 символа в строке
+ - В строке должны быть буквы
+ - Должна быть хотя бы одна буква в верхнем регистре
+ - Должна быть хотя бы одна цифра
+ - Строка не должна быть пустой 
+
+
+
+function strall(String) {
+
+ -- Скрипт должен на вход принимать строку.
+
+    if (typeof (String) == "string"){
+        console.log("OK")
+    }else console.log("Not a string")
+
+ --Минимум 5 символов в строке
+    let lenmin = String.length > 5;
+    if (lenmin) {
+        console.log("OK")
+    } else console.log("Минимум 5 символов в строке")
+
+ --Максимум 64 символа в строке
+
+    let lenmax = String.length <= 64 
+    if (lenmax) {
+        console.log("OK")
+    }else {console.log("Максимум 64 символа в строке")}
+
+ --В строке должны быть буквы
+
+    let tes = /[a-zA-Za-яА-Я]/.test(String)
+    if (tes) {
+        console.log("OK")
+    } else {
+        console.log("В строке должны быть буквы")}
+ 
+ --Должна быть хотя бы одна буква в верхнем регистре
+    
+    let big = /[A-ZA-Я]/.test(String)
+    if (big) {
+        console.log("OK")
+    }   else {
+        console.log("Должна быть хотя бы одна буква в верхнем регистре")
+    }
+ 
+ --Должна быть хотя бы одна цифра
+
+    let numb = /[0-9]/.test(String)
+    if (numb) {
+        console.log("OK")
+    }else {console.log("Должна быть хотя бы одна цифра")}
+
+ -- Строка не должна быть пустой
+    let str = (typeof (String) == "string")
+    if(!!str){
+      console.log("OK");
+        }else {
+            console.log("OK")
+        }
+}
+
+stringall("")
